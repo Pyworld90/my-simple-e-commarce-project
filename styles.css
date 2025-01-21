@@ -1,0 +1,190 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    padding: 10px 15px;
+    color: #fff;
+    position: relative;
+}
+
+.navbar .nav-link:hover {
+    color: #ffdd57;
+    text-decoration: none; /* Prevents underline if set by default */
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffdd57;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Header Styles */
+.jumbotron {
+    position: relative;
+    background: url('img/bg.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Add a semi-transparent overlay to improve text visibility */
+.jumbotron .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Heading and Button Styles */
+.jumbotron h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.jumbotron button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+    background-color: #fff;
+    transition: background 0.3s ease;
+}
+
+.jumbotron button:hover {
+    background-color: #f8f9fa;
+}
+
+.text-white {
+    --bs-text-opacity: 1;
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px;
+  }
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+    margin-bottom: 15px;
+}
+
+.card h5 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    --bs-text-opacity: 1;
+    color: #ffffff !important;
+    font-size: 20px;
+}
+.mt-5 {
+    margin-top: 7rem !important;
+  }
+.p-5 {
+    padding: 7rem !important;
+}
+footer a {
+    color: #17a2b8;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+}

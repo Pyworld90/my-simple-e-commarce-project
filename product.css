@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    padding: 10px 15px;
+    color: #fff;
+    position: relative;
+}
+
+.navbar .nav-link:hover {
+    color: #ffdd57;
+    text-decoration: none; /* Prevents underline if set by default */
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffdd57;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Header */
+.main-header {
+    background: url('img/header-bg.jpg') no-repeat center center/cover;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.main-header p {
+    font-size: 1.5rem;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Products Section */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card .btn {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
